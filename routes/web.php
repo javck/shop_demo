@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\SiteController@renderHomePage');
-
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::namespace('App\Http\Controllers')->group(function(){
+    Route::get('/', 'SiteController@renderHomePage');
+    Route::get('/cart', 'SiteController@renderCartPage')->name('my.cart');
+    Route::get('/addcart/{id}','SiteController@addCart');
+    Route::get('/checkout','SiteController@checkout');
+    Route::get('orders/{order}',function( Order $order){
+        //購買者
+        //dd(User::find($order->owner_id)->name);
+        //訂單明細
+        //dd($order->items);
+        $result = '';
+        foreach($order->items as $item)
+        {
+            $result = $result . $item->title . ',';
+        }
+        dd($result);
+    });
+});
+
+
+
+
+

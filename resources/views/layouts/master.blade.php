@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    @livewireStyles
 </head>
 
 <body>
@@ -50,7 +51,7 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">首頁</a></li>
+                                    <li><a href="{{ url('/') }}">首頁</a></li>
                                     <li><a href="shop.html">商店</a></li>
                                     <li><a href="about.html">關於我們</a></li>
                                     {{-- <li class="hot"><a href="#">Latest</a>
@@ -89,7 +90,7 @@
                                     </div>
                                 </li>
                                 <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                                <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                                <li><a href="{{ route('my.cart') }}"><span class="flaticon-shopping-cart"></span></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -115,7 +116,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="{{ url('/') }}"><img src="{{ Voyager::image(setting('site.logo_footer')) }}" alt=""></a>
+                                    <a href="{{ url('/') }}"><img src="{{ Voyager::image(setting('site.footer_logo')) }}" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -235,6 +236,6 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-
+    @livewireScripts
 </body>
 </html>

@@ -152,7 +152,9 @@
                             <div class="popular-img">
                                 <img src="{{ Voyager::image($item->picUrl) }}" alt="{{ $item->title }}">
                                 <div class="img-cap">
-                                    <span>加入購物車</span>
+                                    <a href="{{ url('addcart/' . $item->id) }}">
+                                        <span>加入購物車</span>
+                                    </a>
                                 </div>
                                 <div class="favorit-items">
                                     <span class="flaticon-heart"></span>
