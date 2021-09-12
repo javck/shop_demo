@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Watch shop | eCommers</title>
+    <title> 哥布林商店 </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="{{ Voyager::image(setting('site.preloader_logo')) }}" alt="">
                 </div>
             </div>
         </div>
@@ -44,27 +44,28 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="{{ Voyager::image(setting('site.logo')) }}" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">shop</a></li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li class="hot"><a href="#">Latest</a>
+                                    <li><a href="index.html">首頁</a></li>
+                                    <li><a href="shop.html">商店</a></li>
+                                    <li><a href="about.html">關於我們</a></li>
+                                    {{-- <li class="hot"><a href="#">Latest</a>
                                         <ul class="submenu">
                                             <li><a href="shop.html"> Product list</a></li>
                                             <li><a href="product_details.html"> Product Details</a></li>
                                         </ul>
-                                    </li>
+                                    </li> 
                                     <li><a href="blog.html">Blog</a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
                                     </li>
+                                    
                                     <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="login.html">Login</a></li>
@@ -74,7 +75,8 @@
                                             <li><a href="checkout.html">Product Checkout</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    --}}
+                                    <li><a href="contact.html">聯絡我們</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -113,11 +115,11 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="{{ url('/') }}"><img src="{{ Voyager::image(setting('site.logo_footer')) }}" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.</p>
+                                        <p>哥布林商店為哥布林學院的示範商店</p>
                                 </div>
                                 </div>
                             </div>
@@ -126,7 +128,7 @@
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Quick Links</h4>
+                                <h4>快速連結</h4>
                                 <ul>
                                     <li><a href="#">About</a></li>
                                     <li><a href="#"> Offers & Discounts</a></li>
@@ -139,7 +141,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>New Products</h4>
+                                <h4>推薦商品</h4>
                                 <ul>
                                     <li><a href="#">Woman Cloth</a></li>
                                     <li><a href="#">Fashion Accessories</a></li>
@@ -152,7 +154,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Support</h4>
+                                <h4>商店支持</h4>
                                 <ul>
                                     <li><a href="#">Frequently Asked Questions</a></li>
                                     <li><a href="#">Terms & Conditions</a></li>

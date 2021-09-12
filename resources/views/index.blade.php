@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="section-tittle mb-70">
-                            <h2>New Arrivals</h2>
+                            <h2>最新到貨</h2>
                         </div>
                     </div>
                 </div>
@@ -140,8 +140,8 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
-                            <h2>Popular Items</h2>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                            <h2>精選商品</h2>
+                            <p>這裡有著小編為大家挑選的激推商品</p>
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                 <!-- Button -->
                 <div class="row justify-content-center">
                     <div class="room-btn pt-70">
-                        <a href="catagori.html" class="btn view-btn1">View More Products</a>
+                        <a href="catagori.html" class="btn view-btn1">看更多商品</a>
                     </div>
                 </div>
             </div>
@@ -181,15 +181,15 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                     <div class="video-wrap">
-                        <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
+                        <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=p5swx76Ja8M"><i class="fas fa-play"></i></a></div>
                     </div>
                     </div>
                 </div>
                 <!-- Arrow -->
                 <div class="thumb-content-box">
                     <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
+                        <h3>了解更多</h3>
+                        <a href="https://service.pandalab.org/laravelcare"> <i class="flaticon-arrow"></i></a>
                     </div>
                 </div>
             </div>
