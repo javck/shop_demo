@@ -35,7 +35,7 @@
             @endforeach
             <tr class="bottom_button">
               <td>
-                
+
               </td>
               <td></td>
               <td></td>

@@ -21,9 +21,10 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('/', 'SiteController@renderHomePage');
-    Route::get('/cart', 'SiteController@renderCartPage')->name('my.cart');
+    Route::get('/cart', 'SiteController@renderCartPage')->name('my.cart');
     Route::get('/addcart/{id}','SiteController@addCart');
     Route::get('/checkout','SiteController@checkout');
+    Route::post('/checkout/callback','SiteController@checkoutCallback');
     Route::get('orders/{order}',function( Order $order){
         //購買者
         //dd(User::find($order->owner_id)->name);
