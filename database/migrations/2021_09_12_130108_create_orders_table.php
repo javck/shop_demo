@@ -33,6 +33,7 @@ class CreateOrdersTable extends Migration
             $table->string('pay_from', 255)->nullable(); //付款來源
             $table->string('reply_desc', 255)->nullable(); //回覆給客戶的訊息
             $table->string('type', 255)->default('normal'); //類型
+            $table->string('invoiceNumber',20)->null(); //發票號碼
             $table->timestamps();
         });
     }

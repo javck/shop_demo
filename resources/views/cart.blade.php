@@ -59,7 +59,9 @@
         </table>
         <div class="checkout_btn_inner float-right">
           <a class="btn_1" href="{{ url('/') }}">繼續購物</a>
-          <a class="btn_1 checkout_btn_1" href="{{ url('/checkout') }}">結帳</a>
+            <a class="btn_1 checkout_btn_1" href="{{ url('/checkoutinvoice') }}">結帳</a>
+
+
         </div>
       </div>
     </div>

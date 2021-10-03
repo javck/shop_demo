@@ -23,7 +23,10 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::get('/', 'SiteController@renderHomePage');
     Route::get('/cart', 'SiteController@renderCartPage')->name('my.cart');
     Route::get('/addcart/{id}','SiteController@addCart');
+    Route::get('/queryorder/{id}','SiteController@queryOrder');
+    Route::get('/queryinvoice/{order_id}','SiteController@queryInvInfo');
     Route::get('/checkout','SiteController@checkout');
+    Route::get('/checkoutinvoice','SiteController@checkoutInvoice');
     Route::post('/checkout/callback','SiteController@checkoutCallback');
     Route::get('orders/{order}',function( Order $order){
         //購買者
