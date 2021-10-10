@@ -1,4 +1,5 @@
 <tr>
+    @if($quantity > 0)
     <td>
       <div class="media">
         <div class="d-flex">
@@ -22,4 +23,5 @@
     <td>
       <h5>${{ $total}}</h5>
     </td>
+    @endif
 </tr>

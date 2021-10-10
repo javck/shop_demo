@@ -30,9 +30,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach ($items_cart as $item)
-                @livewire('cart-item', ['item' => $item])
-            @endforeach
+            @livewire('cart-items')
             <tr class="bottom_button">
               <td>
 
@@ -52,7 +50,7 @@
                 <h5>小計</h5>
               </td>
               <td>
-                <h5>${{ $subtotal }}</h5>
+                <livewire:subtotal-item/>
               </td>
             </tr>
           </tbody>

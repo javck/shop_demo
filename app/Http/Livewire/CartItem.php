@@ -16,11 +16,11 @@ class CartItem extends Component
 
     public function mount($item)
     {
-        $this->rowId = $item->id;
-        $this->pic = $item->associatedModel->pic;
-        $this->title = $item->associatedModel->title;
-        $this->price = $item->price;
-        $this->quantity = $item->quantity;
+        $this->rowId = $item['id'];
+        $this->pic = json_decode($item['associatedModel']['pic'],true)[0];
+        $this->title = $item['associatedModel']['title'];
+        $this->price = $item['price'];
+        $this->quantity = $item['quantity'];
         $this->init();
     }
 
@@ -28,21 +28,32 @@ class CartItem extends Component
     {
         $this->quantity++;
         $this->init();
+        //$this->emit('refreshCartItems');
     }
 
     public function minus()
     {
-        if ($this->quantity > 0) {
-            $this->quantity--;
-            $this->init();
-        } else {
+        $this->quantity--;
+        if ($this->quantity <= 0) {
             \Cart::session(1)->remove($this->rowId);
+        }else{
+            $this->init();
         }
+        //$this->emit('refreshCartItems');
     }
 
     public function init()
     {
-        $this->total = $this->price * $this->quantity;
+
+        \Cart::session(1)->update($this->rowId, [
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $this->quantity
+                )]);
+        $this->total = $this->quantity * $this->price;
+        //dd(\Cart::session(1)->getContent());
+
+        $this->emit('recalcul');
     }
 
     public function render()

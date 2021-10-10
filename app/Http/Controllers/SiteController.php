@@ -38,9 +38,11 @@ class SiteController extends Controller
 
     public function renderCartPage()
     {
-        $items_cart = \Cart::session(1)->getContent();
-        $subtotal = \Cart::session(1)->getSubTotal();
-        return view('cart', compact('items_cart', 'subtotal'));
+        // foreach($items_cart as $item){
+        //     dd($item->quantity);
+        // }
+
+        return view('cart');
     }
 
     public function addCart($id)
