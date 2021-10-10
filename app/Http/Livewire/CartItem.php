@@ -28,7 +28,6 @@ class CartItem extends Component
     {
         $this->quantity++;
         $this->init();
-        //$this->emit('refreshCartItems');
     }
 
     public function minus()
@@ -39,7 +38,6 @@ class CartItem extends Component
         }else{
             $this->init();
         }
-        //$this->emit('refreshCartItems');
     }
 
     public function init()
@@ -51,7 +49,6 @@ class CartItem extends Component
                     'value' => $this->quantity
                 )]);
         $this->total = $this->quantity * $this->price;
-        //dd(\Cart::session(1)->getContent());
 
         $this->emit('recalcul');
     }
